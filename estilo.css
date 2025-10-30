@@ -20,6 +20,88 @@ header {
   padding: 20px;
   text-align: center;
 }
+/* --- Estilos da Barra de Navegação --- */
+
+/* Precisamos tirar o padding original do header para o nav funcionar */
+header {
+  padding: 0;
+}
+
+/* Este é o 'container' do seu perfil que criamos */
+.header-content {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* A barra de navegação em si */
+nav {
+  background-color: #1a1a1a; /* Um preto/cinza escuro */
+  border-bottom: 1px solid #444; /* Uma linha sutil (como na sua barra vermelha) */
+}
+
+nav ul {
+  list-style: none; /* Remove as bolinhas da lista */
+  padding: 0;
+  margin: 0;
+  display: flex; /* O truque mágico para deixar tudo na horizontal! */
+  justify-content: center; /* Centraliza os itens na barra */
+  align-items: center; /* Alinha tudo verticalmente no centro */
+  height: 60px; /* Uma altura fixa para a barra */
+}
+
+nav li {
+  margin: 0 15px; /* Espaçamento entre cada item do menu */
+}
+
+nav a {
+  color: white;
+  text-decoration: none; /* Remove o sublinhado */
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s; /* Efeito suave ao passar o mouse */
+}
+
+/* Efeito ao passar o mouse (como o círculo em "Projects" na sua foto) */
+nav a:hover {
+  background-color: #555;
+}
+
+/* --- O Botão "Contato" (igual ao da sua imagem) --- */
+nav a.btn-contato {
+  background-color: #e63946; /* Um vermelho forte */
+  color: white;
+}
+
+nav a.btn-contato:hover {
+  background-color: #f15a66; /* Um vermelho mais claro */
+}
+
+/* --- O Botão "Modo Noturno" --- */
+#modo-noturno {
+  background: none;
+  border: 1px solid white;
+  color: white;
+  font-size: 1.2em;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Deixa o botão redondo */
+  cursor: pointer;
+  margin-left: 20px;
+  transition: background-color 0.3s;
+}
+
+#modo-noturno:hover {
+  background-color: #555;
+}
+
+/* --- BÔNUS: Efeito de Rolagem Suave --- */
+/* Isso faz a página deslizar ao clicar no link */
+html {
+  scroll-behavior: smooth;
+}
 
 header h1 {
   margin: 0;
@@ -77,4 +159,5 @@ footer {
   background-color: #333;
   color: white;
   margin-top: 30px;
+
 }
