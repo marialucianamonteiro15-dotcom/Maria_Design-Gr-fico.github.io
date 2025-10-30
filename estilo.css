@@ -78,7 +78,13 @@ nav a.btn-contato {
 nav a.btn-contato:hover {
   background-color: #f15a66; /* Um vermelho mais claro */
 }
-
+/* Estilo para imagens dentro dos cards de projeto */
+.card-projeto img {
+  width: 100%; /* Faz a imagem ocupar toda a largura do card */
+  height: auto; /* Mantém a proporção da imagem */
+  border-radius: 5px; /* Arredonda os cantos da imagem */
+  margin-bottom: 10px; /* Dá um espaço antes do texto */
+}
 /* --- O Botão "Modo Noturno" --- */
 #modo-noturno {
   background: none;
@@ -161,3 +167,4 @@ footer {
   margin-top: 30px;
 
 }
+
