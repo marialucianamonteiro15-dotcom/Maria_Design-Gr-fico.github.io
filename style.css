@@ -31,12 +31,12 @@ a {
     padding: 30px 50px; /* 30px em cima/baixo, 50px nas laterais */
 }
 
-.logo a {
-    font-family: var(--font-playfair);
-    font-weight: 700;
-    font-size: 1.5rem; /* 24px */
+/* Estilo para o logo como IMAGEM */
+.logo a img {
+    height: 60px; /* Ajuste esta altura como preferir */
+    width: auto;  /* Mantém a proporção */
+    display: block; /* Remove espaços extras */
 }
-
 .navbar nav ul {
     list-style: none; /* Remove bolinhas */
     display: flex;
