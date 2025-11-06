@@ -1,66 +1,135 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfólio de Maria Luciana</title>
-  <link rel="stylesheet" href="estilo.css">
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maria Luciana - Web & Gráfica Designer</title>
 
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
 <body>
 
-  <header id="inicio">
-  <div class="header-content">
-    <img class="foto-perfil" src="LINK_DA_SUA_FOTO.jpg" alt="Foto de perfil de Maria Luciana">
-    <h1>Maria Luciana Monteiro</h1>
-    <p>  Web Design e Design gráfica</p>
-  </div>
+    <header class="navbar">
+        <div class="logo">
+            <img src="imagens/logo.png" alt="MARIA LUCIANA">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">INÍCIO</a></li>
+                <li><a href="#sobre">SOBRE</a></li>
+                <li><a href="#projetos">PROJETOS</a></li>
+                <li><a href="#contato">CONTATO</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <nav>
-    <ul>
-      <li><a href="#inicio">Início</a></li>
-      <li><a href="#habilidades">Habilidades</a></li>
-      <li><a href="#projetos">Projetos</a></li>
-      <li><a href="#contato" class="btn-contato">Contato</a></li>
-      <li><button id="modo-noturno" title="Alternar modo noturno">🌙</button></li>
-    </ul>
-  </nav>
-</header>
+    <main>
+        <section class="hero">
+            <h1>Design Técnico. Soluções Criativas.</h1>
+            <p>Web & Gráfica Designer focada em criar experiências digitais elegantes e funcionais.</p>
+            <a href="#projetos" class="cta-button">VEJA MEUS PROJETOS</a>
+        </section>
+<section class="projetos" id="projetos">
+    <h2>Projetos Selecionados</h2>
 
-  <main>
-    <section class="projetos">
-      <h2>Meus Projetos</h2>
+    <div class="projetos-grid">
+        
+        <div class="projeto-card">
+    <img src="imagens/projeto1.png" alt="Design do website para a [Nome do Cliente]">
 
-      <div class="card-projeto">
-        <h3>Projeto "Wild Draw"</h3>
-        <p>Criação de logo, banner e website para um projeto pessoal.</p>
-      </div>
+            <div class="projeto-info">
+                <h3>Nome do Projeto 1</h3>
+                <p>Website</p>
+            </div>
+        </div>
 
-      <div class="card-projeto">
-        <h3>Meu Primeiro Site</h3>
-        <p>A página de teste que publiquei no GitHub Pages.</p>
-      </div>
-    </section>
+        <div class="projeto-card">
+    <img src="imagens/projeto1.png" alt="Design do website para a [Nome do Cliente]">
 
-    <section class="habilidades">
-      <h2>Minhas Habilidades</h2>
-      <ul>
-        <li>HTML5</li>
-        <li>CSS3</li>
-        <li>Corel Draw</li>
-        <li>Canva</li>
-        <li>Design de Logo</li>
-      </ul>
-    </section>
-  </main>
+            <div class="projeto-info">
+                <h3>Nome do Projeto 2</h3>
+                <p>Branding</p>
+            </div>
+        </div>
 
-  <footer>
-    <p>Interessado em trabalhar comigo?</p>
-    <p>Entre em contato: seu-email-aqui@gmail.com</p>
-  </footer>
+        <div class="projeto-card">
+    <img src="imagens/projeto1.png" alt="Design do website para a [Nome do Cliente]">
 
+            <div class="projeto-info">
+                <h3>Nome do Projeto 3</h3>
+                <p>Identidade Visual</p>
+            </div>
+        </div>
+        
+<div class="projeto-card">
+    <img src="imagens/projeto1.png" alt="Design do website para a [Nome do Cliente]">
+      <div class="projeto-info">
+                <h3>Nome do Projeto 4</h3>
+                <p>Web Design</p>
+            </div>
+        </div>
+
+    </div> </section>
+<section class="sobre" id="sobre">
+    <div class="sobre-container">
+        <div class="sobre-imagem">
+            <img src="imagens/minha-foto.jpg" alt="Foto profissional de Maria Luciana">
+        </div>
+        <div class="sobre-texto">
+            <h2>Olá, sou Maria Luciana.</h2>
+            <p>
+                Minha filosofia é simples: design não é apenas sobre o que é bonito,
+                é sobre o que funciona. Eu uno precisão técnica com uma estética
+                elegante e acolhedora para criar websites e marcas que não só
+                impressionam, mas também trazem resultados.
+            </p>
+            <p>
+                Com agilidade e foco no seu objetivo, estou pronta para transformar
+                sua ideia em uma solução digital funcional e memorável.
+            </p>
+            <a href="#contato" class="cta-button">VAMOS CONVERSAR</a>
+        </div>
+    </div>
+</section>
+
+<section class="chamada-final" id="contato">
+    <h2>Vamos criar algo incrível juntos?</h2>
+    <p>Estou disponível para novos projetos. Adoraria ouvir sua ideia.</p>
+    
+    <a href="https://wa.me/5591982292080" class="cta-button-invertido">
+        ENTRE EM CONTATO
+    </a>
+</section>
+
+    </main>
+<footer>
+    <div class="footer-container">
+        <div class="footer-logo">
+            <h3>MARIA LUCIANA</h3>
+            <p>&copy; 2025 - Todos os direitos reservados.</p>
+        </div>
+        
+        <div class="footer-links">
+            <h4>Navegação</h4>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-social">
+            <h4>Conecte-se</h4>
+            <a href="#">LinkedIn</a>
+            <a href="#">Behance</a>
+            <a href="#">Instagram</a>
+        </div>
+    </div>
+</footer>
 </body>
-
 </html>
-
-

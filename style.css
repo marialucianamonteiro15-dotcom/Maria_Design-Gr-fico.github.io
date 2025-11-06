@@ -1,0 +1,357 @@
+/* ======== 1. VARIÁVEIS DE MARCA (Suas Decisões de Design) ======== */
+:root {
+    --cor-cinza-chumbo: #333333; /* Cor "Séria/Técnica" */
+    --cor-coral-suave: #E87A5D;   /* Cor "Acolhedora/Inovadora" */
+    --cor-off-white: #F9F9F9;     /* Fundo principal "Elegante" */
+    --cor-branca: #FFFFFF;
+
+    --font-playfair: 'Playfair Display', serif; /* Fonte "Elegante/Séria" */
+    --font-poppins: 'Poppins', sans-serif;       /* Fonte "Técnica/Acolhedora" */
+}
+
+/* ======== 2. ESTILOS GERAIS (Reset) ======== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-poppins);
+    background-color: var(--cor-off-white);
+    color: var(--cor-cinza-chumbo);
+}
+
+a {
+    text-decoration: none;
+    color: inherit; /* Herda a cor do elemento pai */
+}
+
+/* ======== 3. LAYOUT DO HEADER (Cabeçalho) ======== */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Logo na esquerda, menu na direita */
+    align-items: center;
+    padding: 30px 50px; /* 30px em cima/baixo, 50px nas laterais */
+}
+
+.logo a {
+    font-family: var(--font-playfair);
+    font-weight: 700;
+    font-size: 1.5rem; /* 24px */
+}
+
+.navbar nav ul {
+    list-style: none; /* Remove bolinhas */
+    display: flex;
+    gap: 30px; /* Espaço entre os itens do menu */
+}
+
+.navbar nav a {
+    font-weight: 300;
+    font-size: 0.9rem; /* 14px */
+    letter-spacing: 1px;
+}
+
+/* ======== 4. ESTILO DA SEÇÃO "HERO" ======== */
+.hero {
+    /* Centraliza tudo na tela */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    text-align: center;
+    padding: 100px 20px;
+    max-width: 900px;
+    margin: 0 auto; /* Centraliza o container */
+}
+
+.hero h1 {
+    font-family: var(--font-playfair);
+    font-size: 3.5rem; /* 56px - Título de impacto */
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.25rem; /* 20px */
+    font-weight: 300;
+    margin-bottom: 40px;
+    max-width: 600px; /* Limita a largura do parágrafo */
+}
+
+.cta-button {
+    font-family: var(--font-poppins);
+    font-weight: 500;
+    font-size: 1rem;
+    background-color: var(--cor-coral-suave);
+    color: var(--cor-branca);
+    padding: 15px 35px;
+    border-radius: 5px; /* Bordas levemente arredondadas */
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #d16a4f; /* Um tom de coral um pouco mais escuro */
+}
+/* ======== 5. ESTILO DA SEÇÃO "PROJETOS" ======== */
+
+.projetos {
+    padding: 80px 50px; /* 80px em cima/baixo, 50px nas laterais */
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza */
+}
+
+.projetos h2 {
+    font-family: var(--font-playfair);
+    font-size: 2.5rem; /* 40px */
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--cor-cinza-chumbo);
+}
+
+.projetos-grid {
+    display: grid;
+    /* Cria 2 colunas em telas médias/grandes.
+       '1fr' significa "1 fração de espaço".
+    */
+    grid-template-columns: 1fr 1fr;
+    gap: 30px; /* Espaço entre os cards */
+    
+    /* Para telas menores (celulares), o grid será quebrado 
+       (veja o @media query no final) */
+}
+
+.projeto-card {
+    background-color: var(--cor-branca);
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Sombra sutil */
+    overflow: hidden; /* Garante que a imagem não vaze */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projeto-card:hover {
+    transform: translateY(-5px); /* Efeito sutil de "levantar" */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.projeto-card img {
+    width: 100%;
+    display: block; /* Remove espaço extra abaixo da imagem */
+}
+
+.projeto-info {
+    padding: 20px 25px;
+}
+
+.projeto-info h3 {
+    font-family: var(--font-playfair);
+    font-size: 1.5rem; /* 24px */
+    margin: 0 0 5px 0;
+    color: var(--cor-cinza-chumbo);
+}
+
+.projeto-info p {
+    font-family: var(--font-poppins);
+    font-size: 0.9rem; /* 14px */
+    font-weight: 300;
+    color: var(--cor-coral-suave); /* Categoria na cor de destaque */
+    margin: 0;
+}
+
+
+/* ======== 6. RESPONSIVIDADE (Ajuste para Celulares) ======== */
+
+/* Quando a tela for menor que 768px (tablets/celulares),
+   as colunas dos projetos viram uma única coluna.
+*/
+/* ======== 7. ESTILO DA SEÇÃO "SOBRE" ======== */
+.sobre {
+    background-color: var(--cor-branca); /* Um fundo branco para destacar */
+    padding: 100px 50px;
+}
+
+.sobre-container {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr; /* Coluna da imagem é 1fr, texto 1.2fr */
+    gap: 60px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    border-radius: 5px; /* Borda sutil na foto */
+}
+
+.sobre-texto h2 {
+    font-family: var(--font-playfair);
+    font-size: 2.5rem; /* 40px */
+    color: var(--cor-cinza-chumbo);
+    margin-top: 0;
+}
+
+.sobre-texto p {
+    font-size: 1.1rem; /* 18px */
+    font-weight: 300;
+    line-height: 1.7; /* Espaçamento entre linhas, melhora leitura */
+    margin-bottom: 25px;
+}
+
+/* ======== 8. ESTILO DA SEÇÃO "CHAMADA FINAL (CONTATO)" ======== */
+.chamada-final {
+    /* Este é o design do seu cartão de visita! */
+    background-color: var(--cor-coral-suave);
+    color: var(--cor-branca);
+    padding: 100px 50px;
+    text-align: center;
+}
+
+.chamada-final h2 {
+    font-family: var(--font-playfair);
+    font-size: 2.8rem; /* 45px */
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.chamada-final p {
+    font-size: 1.25rem; /* 20px */
+    font-weight: 300;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button-invertido {
+    /* Botão invertido, como no plano */
+    font-family: var(--font-poppins);
+    font-weight: 500;
+    font-size: 1rem;
+    background-color: var(--cor-branca);
+    color: var(--cor-cinza-chumbo);
+    padding: 15px 35px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button-invertido:hover {
+    background-color: #f1f1f1; /* Branco um pouco mais escuro */
+}
+
+/* ======== 9. ESTILO DO RODAPÉ (FOOTER) ======== */
+footer {
+    background-color: var(--cor-off-white);
+    padding: 60px 50px;
+    border-top: 1px solid #eee; /* Linha fina de separação */
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr; /* Logo/nome, Links, Social */
+    gap: 40px;
+}
+
+.footer-logo h3 {
+    font-family: var(--font-playfair);
+    font-weight: 700;
+    font-size: 1.5rem; /* 24px */
+    margin: 0 0 10px 0;
+    color: var(--cor-cinza-chumbo);
+}
+
+.footer-logo p {
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin: 0;
+}
+
+.footer-links h4,
+.footer-social h4 {
+    font-family: var(--font-poppins);
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--cor-cinza-chumbo);
+    margin-bottom: 15px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a,
+.footer-social a {
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: var(--cor-cinza-chumbo);
+    transition: color 0.3s ease;
+}
+
+.footer-social a {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+    color: var(--cor-coral-suave); /* Efeito hover na cor da marca */
+}
+/* ======== 6. RESPONSIVIDADE (Ajuste para Celulares) ======== */
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Menu fica abaixo do logo */
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem; /* Diminui o título principal */
+    }
+
+    .hero p {
+        font-size: 1rem; /* Diminui o subtítulo */
+    }
+    
+    .projetos {
+        padding: 60px 20px; /* Menos preenchimento lateral */
+    }
+
+    .projetos-grid {
+        grid-template-columns: 1fr; /* Uma coluna */
+    }
+
+    .sobre {
+        padding: 60px 20px;
+    }
+
+    .sobre-container {
+        grid-template-columns: 1fr; /* Pilha a imagem e o texto */
+        gap: 30px;
+    }
+
+    .chamada-final {
+        padding: 80px 20px;
+    }
+
+    .chamada-final h2 {
+        font-size: 2.2rem;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr; /* Uma coluna no rodapé */
+        text-align: center;
+    }
+
+    .footer-social {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+}
