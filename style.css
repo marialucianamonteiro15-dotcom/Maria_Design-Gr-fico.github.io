@@ -28,17 +28,15 @@ a {
     display: flex;
     justify-content: space-between; /* Logo na esquerda, menu na direita */
     align-items: center;
-    padding: 1px 50px; /* 30px em cima/baixo, 50px nas laterais */
+    padding: 10px 50px; /* 30px em cima/baixo, 50px nas laterais */
     border-bottom: 1px solid #eeeeee;
     
 }
 
-   
-
 /* Estilo para o logo como IMAGEM */
 .logo a img {
     height: auto; /* A altura vai se ajustar sozinha */
-    width: 100px;  /* Mantém a proporção */
+    width: 190px;  /* Mantém a proporção */
     display: block; /* Remove espaços extras */
 }
 .navbar nav ul {
