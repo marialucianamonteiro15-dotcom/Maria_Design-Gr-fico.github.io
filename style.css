@@ -356,5 +356,9 @@ footer {
         justify-content: center;
         gap: 20px;
     }
-
+}
+/* Adicione isso ao seu style.css, pode ser no final da seção 5 */
+.projeto-link {
+  text-decoration: none;
+  color: inherit;
 }
