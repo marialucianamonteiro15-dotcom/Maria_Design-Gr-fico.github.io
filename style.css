@@ -362,3 +362,9 @@ footer {
   text-decoration: none;
   color: inherit;
 }
+/* Adicione isso ao seu CSS */
+
+.projeto-link {
+  text-decoration: none; /* Remove o sublinhado */
+  color: inherit;      /* Faz o texto herdar a cor normal (o seu --cor-cinza-chumbo) */
+}
